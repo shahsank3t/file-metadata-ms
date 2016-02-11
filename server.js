@@ -2,9 +2,7 @@ var multer = require('multer');
 var express = require('express');
 var app = express();
 
-app.use(multer({
-    dest: './uploads/',
-}).single('fileToUpload'));
+app.use(multer().single('fileToUpload'));
 
 app.use(express.static(__dirname + '/WebContent'));
 
