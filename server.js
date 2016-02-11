@@ -8,7 +8,7 @@ app.use(multer({
 
 app.use(express.static(__dirname + '/WebContent'));
 
-app.post('/log', function(req, res) {
+app.post('/upload', function(req, res) {
     // console.log(req.file);
     res.json({
     	fileName: req.file.originalname,
