@@ -8,6 +8,7 @@ app.use(express.static(__dirname + '/WebContent'));
 
 app.post('/upload', function(req, res) {
     // console.log(req.file);
+    res.writeHead(200, {"Content-Type": "application/json"});
     res.json({
     	fileName: req.file.originalname,
         fileSize: req.file.size + ' bytes'
